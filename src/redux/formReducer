@@ -1,0 +1,24 @@
+const initialState = {
+    name: "",
+    age: ""
+}
+
+export const formReducer = (state = initialState, action) => {
+    switch(action.type) {
+        case "SAVE_DATA":
+            return {
+                ...state,
+                name: action.payload.name,
+                age: action.payload.age
+            }
+        default:
+            return state
+    }
+}
+
+export const saveFormDataAction = (payload) => {
+    return {
+        type: "SAVE_DATA",
+        payload
+    }
+}
