@@ -70,6 +70,8 @@ button {
 }
 input {
   height: 20px;
+  border: none;
+  background-color: #583e3e80;
 }
 
 .Data {
